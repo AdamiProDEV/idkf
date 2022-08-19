@@ -111,6 +111,8 @@ end
 
 
 function AL:CreateButton(text, callback)
+    locl callback = callback or function() end
+
     TextButton_2.Parent = MainWindow
     TextButton_2.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
     TextButton_2.Position = UDim2.new(0.270000011, 0, 0.160999998, 0)
@@ -139,6 +141,9 @@ function AL:CreateButton(text, callback)
     TextLabel.TextSize = 14.000
     UICorner_4.CornerRadius = UDim.new(0, 10)
     UICorner_4.Parent = TextButton_2
+    TextButton_2.MouseButton1Down:Connect(function()
+        pcall(callback)
+    end)
 end
 
 return AL
