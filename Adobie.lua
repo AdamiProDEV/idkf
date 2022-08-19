@@ -110,8 +110,9 @@ function AL:CreateWindow(text)
 end
 
 
+
 function AL:CreateButton(text, callback)
-    locl callback = callback or function() end
+    local callback = callback or function() end
 
     TextButton_2.Parent = MainWindow
     TextButton_2.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
