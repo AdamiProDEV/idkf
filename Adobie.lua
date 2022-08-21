@@ -49,6 +49,7 @@ local SectionFrame = Instance.new("Frame")
 local SectionLabel = Instance.new("TextLabel")
 local SectionUICorner = Instance.new("UICorner")
 
+MainWindow.Draggable = true
 pf.Name = "pageFolder"
 pf.Parent = e
 local newPage = Instance.new("ScrollingFrame")
