@@ -49,11 +49,11 @@ local SectionFrame = Instance.new("Frame")
 local SectionLabel = Instance.new("TextLabel")
 local SectionUICorner = Instance.new("UICorner")
 
-MainWindow.Draggable = true
 pf.Name = "pageFolder"
 pf.Parent = e
 local newPage = Instance.new("ScrollingFrame")
 local sectionList = Instance.new("UIListLayout")
+MainFrame.Draggable = true
 local function UpdateSize()
     local cS = sectionList.AbsoluteContentSize
 
@@ -62,7 +62,7 @@ local function UpdateSize()
     }):Play()
 end
 
-function AL:CreateLibrary(text)
+function AL.CreateLibrary(text)
 
     text = text or "No Lib Name Has been Set"
 
@@ -148,7 +148,7 @@ e.ZIndex = 2
 
 local tabs = {}
 
-function tabs:Tab(text)
+function tabs:Createtab(text)
 
     text = text or "tab"
 
@@ -224,7 +224,7 @@ end
 
 local sections = {}
 
-function sections:Section(text)
+function sections:CreateSection(text)
     local SectionFrame = Instance.new("Frame")
     local SectionLabel = Instance.new("TextLabel")
     local sectionExpannd = Instance.new("ImageButton")
@@ -289,13 +289,14 @@ function sections:Section(text)
             wait(0.10)
             UpdateSize()
     end
+    return sections
 end)
 end
 
 
 local buttons = {}
 
-function buttons:Button(text, callback)
+function buttons:CreateButton(text, callback)
     text = text or "Button"
 
     local callback = callback or function() end
@@ -334,56 +335,3 @@ function buttons:Button(text, callback)
 end
 
 return AL
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
