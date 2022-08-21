@@ -100,9 +100,9 @@ MainWindowText.BackgroundTransparency = 1.000
 MainWindowText.Position = UDim2.new(0.290000081, 0, 0.0299999975, 0)
 MainWindowText.Size = UDim2.new(0, 110, 0, 16)
 MainWindowText.ZIndex = 2
-MainWindowText.Font = Enum.Font.GothamSemibold
+MainWindowText.Font = Enum.Font.GothamBold
 MainWindowText.Text = text
-MainWindowText.TextColor3 = Color3.fromRGB(153, 255, 238)
+MainWindowText.TextColor3 = Color3.fromRGB(255,255,255)
 MainWindowText.TextSize = 14.000
 MainWindowText.TextWrapped = true
 MainWindowText.TextXAlignment = Enum.TextXAlignment.Left
@@ -334,19 +334,6 @@ end)
 return allitems
 end
 return AL
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
